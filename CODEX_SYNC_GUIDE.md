@@ -68,44 +68,60 @@ CyberAtlas
 GitHub 建好後，回到終端機接 remote：
 
 ```sh
-git remote add origin https://github.com/YOUR_ACCOUNT/CyberAtlas.git
+git remote add origin https://github.com/yin0616/cyberatlas.git
 git branch -M main
 git push -u origin main
 ```
 
-把 `YOUR_ACCOUNT` 換成你的 GitHub 帳號。
+這個專案目前使用的 GitHub repository 是：
 
-## 第二次：在家裡桌機 clone 專案
+```text
+https://github.com/yin0616/cyberatlas
+```
+
+## 第二次：在 Windows 家裡桌機 clone 專案
 
 家裡桌機先安裝：
 
 - Git
 - ChatGPT Desktop 或 Codex CLI
 - Android Studio 或 IntelliJ IDEA
-- Xcode，如果要做 iOS
 
-找一個你想放專案的位置，例如：
+Windows 不能直接 build iOS app，iOS 實機或模擬器仍然需要 Mac + Xcode。Windows 桌機可以先負責 Android、KMP shared code、文件、內容資料與大部分 Compose UI。
 
-```sh
-mkdir -p ~/Projects
-cd ~/Projects
+建議在 Windows 放這裡：
+
+```text
+C:\Users\你的使用者名稱\Projects\CyberAtlas
+```
+
+用 PowerShell 或 Windows Terminal 執行：
+
+```powershell
+mkdir $HOME\Projects
+cd $HOME\Projects
 ```
 
 clone 專案：
 
-```sh
-git clone https://github.com/YOUR_ACCOUNT/CyberAtlas.git
+```powershell
+git clone https://github.com/yin0616/cyberatlas.git CyberAtlas
 cd CyberAtlas
 ```
 
 確認內容有下來：
 
-```sh
+```powershell
 ls
 git status
 ```
 
-然後在 ChatGPT Desktop / Codex 裡，把這個資料夾加成 local project。
+然後：
+
+- Android Studio 選 **Open**，打開 `C:\Users\你的使用者名稱\Projects\CyberAtlas`。
+- ChatGPT Desktop / Codex 新增 local project，也選同一個 `CyberAtlas` 資料夾。
+
+不要只開 `androidApp`，要開有 `settings.gradle.kts`、`AGENTS.md` 的 repo 根目錄。
 
 ## 每次開始寫之前
 
@@ -125,8 +141,8 @@ git pull
 
 例如家裡桌機：
 
-```sh
-cd ~/Projects/CyberAtlas
+```powershell
+cd $HOME\Projects\CyberAtlas
 git pull
 ```
 
@@ -161,7 +177,8 @@ git push
 
 在家裡桌機寫：
 
-```sh
+```powershell
+cd $HOME\Projects\CyberAtlas
 git pull
 # 開發
 git add .
@@ -181,7 +198,8 @@ git push
 
 回家後桌機再接：
 
-```sh
+```powershell
+cd $HOME\Projects\CyberAtlas
 git pull
 ```
 
