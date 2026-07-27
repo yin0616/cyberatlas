@@ -1,0 +1,10 @@
+Build/
+Build-iOS/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.gradle/
+**/build/
+local.properties
+*.iml
+.idea/
