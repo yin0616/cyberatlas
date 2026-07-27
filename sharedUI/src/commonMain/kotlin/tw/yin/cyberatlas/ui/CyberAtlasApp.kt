@@ -36,6 +36,9 @@ import androidx.compose.ui.unit.sp
 import tw.yin.cyberatlas.data.SampleAtlas
 import tw.yin.cyberatlas.model.AtlasWorld
 import tw.yin.cyberatlas.model.ConceptCard
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 
 @Composable
 fun CyberAtlasApp() {
@@ -58,9 +61,58 @@ fun CyberAtlasApp() {
                     world = world,
                     onBack = { selectedWorld = null }
                 )
-            } ?: WorldMapScreen(
+            } ?: AtlasMapScreen(
                 worlds = SampleAtlas.worlds,
                 onOpenWorld = { selectedWorld = it }
+            )
+        }
+    }
+}
+
+@Composable
+private fun AtlasMapScreen(
+    worlds: List<AtlasWorld>,
+    onOpenWorld: (AtlasWorld) -> Unit
+) {
+    val foundationWorld = worlds.firstOrNull() ?: return
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFF07111F))
+    ) {
+        Text(
+            text = "資安地圖",
+            color = Color.White,
+            fontSize = 28.sp,
+            fontWeight = FontWeight.Black,
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(24.dp)
+        )
+        Box(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .size(135.dp)
+                .background(
+                    color = Color(0xFF123C4A),
+                    shape = CircleShape
+                )
+                .border(
+                    width = 2.dp,
+                    color = Color(0xFF5EEAD4),
+                    shape = CircleShape
+                )
+                .clickable {
+                    onOpenWorld(foundationWorld)
+                },
+            contentAlignment = Alignment.Center
+        ) {
+            Text(
+                text = foundationWorld.title,
+                color = Color.White,
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Black
             )
         }
     }

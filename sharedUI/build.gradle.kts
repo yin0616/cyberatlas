@@ -9,7 +9,6 @@ kotlin {
     androidTarget()
 
     listOf(
-        iosX64(),
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
@@ -36,7 +35,7 @@ kotlin {
 
 android {
     namespace = "tw.yin.cyberatlas.sharedui"
-    compileSdk = 37
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24

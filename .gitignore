@@ -4,6 +4,7 @@ DerivedData/
 *.xcuserstate
 xcuserdata/
 .gradle/
+.kotlin/
 **/build/
 local.properties
 *.iml
