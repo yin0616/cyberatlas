@@ -26,7 +26,6 @@ This is not primarily a quiz bank, paid course app, subscription product, or bac
 - `sharedUI/`: Compose Multiplatform UI shared by Android and iOS.
 - `androidApp/`: Android app entry point, manifest, and platform wiring.
 - `iosApp/`: iOS SwiftUI shell and future KMP framework integration notes.
-- `Texuan/` and `Texuan.xcodeproj/`: legacy SwiftUI prototype kept as UI/product reference only.
 - `CONTENT_MAP.md`: first-pass content taxonomy.
 - `PRODUCT_SPEC.md`: product positioning and MVP scope.
 - `KMP_DEVELOPMENT.md`: KMP architecture and development notes.
@@ -41,7 +40,7 @@ Prefer work that strengthens the KMP product path:
 4. iOS shell and KMP framework integration in `iosApp/`.
 5. Product/content documents when the direction is still being shaped.
 
-Do not treat the legacy `Texuan/` SwiftUI app as the main implementation unless the user explicitly asks to return to the old SwiftUI prototype.
+The legacy `Texuan/` SwiftUI prototype has been removed from the working tree. Use Git history only if an old reference is explicitly needed; do not recreate it as the main implementation.
 
 ## Build And Verification
 

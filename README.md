@@ -54,4 +54,4 @@ gradle :androidApp:assembleDebug
 
 ## 舊 SwiftUI 原型
 
-`Texuan/` 和 `Texuan.xcodeproj/` 是前一版 SwiftUI 原型，暫時保留當 UI/概念參考。主線開發改走 KMP。
+前一版 `Texuan` SwiftUI 原型已從工作目錄移除。需要參考時可從 Git 歷史查看；目前主線開發只走 KMP。
