@@ -12,10 +12,8 @@ struct ContentView: View {
                             .frame(width: 54, height: 54)
                             .background(Color.blue.opacity(0.12))
                             .clipShape(RoundedRectangle(cornerRadius: 12))
-
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(world.title)
-                                .font(.headline)
+                            Text(world.title).font(.headline)
                             Text(world.summary)
                                 .font(.subheadline)
                                 .foregroundStyle(.secondary)

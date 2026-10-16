@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct CyberAtlasIOSApp: App {
+struct CyberAtlasApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

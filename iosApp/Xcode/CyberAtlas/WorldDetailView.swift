@@ -7,8 +7,7 @@ struct WorldDetailView: View {
         List {
             Section(world.countryTitle) {
                 Label(world.summary, systemImage: world.icon == "盾牌" ? "shield" : "book.closed")
-                Text(world.card.title)
-                    .font(.headline)
+                Text(world.card.title).font(.headline)
                 LabeledContent("類型", value: world.card.kind.rawValue)
                 LabeledContent("難度", value: "\(world.card.difficulty)")
                 LabeledContent("這是什麼", value: world.card.whatItIs)

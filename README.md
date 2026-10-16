@@ -20,7 +20,8 @@ CyberAtlas（資安地圖）是一個免費、中文優先的資安學習 App。
 ```text
 .
 ├── androidApp/    # Kotlin + Jetpack Compose Android App
-├── iosApp/        # Swift + SwiftUI iOS App
+├── iosApp/
+│   └── Xcode/     # CyberAtlas.xcodeproj + SwiftUI 原生 iOS App
 ├── shared/        # 舊 KMP 模組，暫保留，未加入主建置
 ├── sharedUI/      # 舊 Compose Multiplatform 模組，暫保留，未加入主建置
 ├── gradle/        # Gradle version catalog

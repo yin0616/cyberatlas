@@ -15,6 +15,11 @@ android {
     namespace = "tw.yin.cyberatlas"
     compileSdk = 36
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
     defaultConfig {
         applicationId = "tw.yin.cyberatlas"
         minSdk = 24

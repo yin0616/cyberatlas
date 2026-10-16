@@ -13,15 +13,7 @@ enum SampleAtlas {
         world("governance", "治理與法遵", "ISO、資通安全法、個資與事件應變。", "文件", "ISO 27001 與 27002", "要求和指引要分清楚", .concept)
     ]
 
-    private static func world(
-        _ id: String,
-        _ title: String,
-        _ summary: String,
-        _ icon: String,
-        _ countryTitle: String,
-        _ cardTitle: String,
-        _ kind: CardKind
-    ) -> AtlasWorld {
+    private static func world(_ id: String, _ title: String, _ summary: String, _ icon: String, _ countryTitle: String, _ cardTitle: String, _ kind: CardKind) -> AtlasWorld {
         AtlasWorld(
             id: id,
             title: title,

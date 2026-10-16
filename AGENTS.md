@@ -24,7 +24,8 @@ This is not primarily a quiz bank, paid course app, subscription product, or bac
 ## Repository Map
 
 - `androidApp/`: native Android app, models, sample content, and Compose UI.
-- `iosApp/`: native SwiftUI app, models, sample content, and views.
+- `iosApp/Xcode/`: canonical native SwiftUI Xcode project, models, sample content, and views.
+- `iosApp/README.md`: iOS project entry and verification notes.
 - `shared/` and `sharedUI/`: legacy KMP modules retained temporarily and excluded from the active build.
 - `CONTENT_MAP.md`: first-pass content taxonomy.
 - `PRODUCT_SPEC.md`: product positioning and MVP scope.
