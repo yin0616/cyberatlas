@@ -1,6 +1,6 @@
 # CyberAtlas / 資安地圖
 
-CyberAtlas（資安地圖）是一個免費、中文優先的 KMP 學習 app 骨架。
+CyberAtlas（資安地圖）是一個免費、中文優先的資安學習 App。
 
 它不是單純刷題 app，而是用「大世界 / 小國家 / 概念卡 / 小任務」整理資安、網路、作業系統、計算機架構、密碼學、鑑識、逆向與治理法遵。
 
@@ -8,20 +8,21 @@ CyberAtlas（資安地圖）是一個免費、中文優先的 KMP 學習 app 骨
 
 - 英文品牌名：CyberAtlas
 - 中文產品名：資安地圖
-- 主技術棧：Kotlin Multiplatform + Compose Multiplatform
+- Android：Kotlin + Jetpack Compose
+- iOS：Swift + SwiftUI
 - 第一版語言：中文版
 - 內容策略：先做骨架與少量範例，不一次塞滿教材
 - 資料策略：本機 sample data，之後再考慮匯入內容包或後端
 - 商業策略：免費，不做訂閱、不塞廣告
 
-## KMP 專案結構
+## 專案結構
 
 ```text
 .
-├── shared/        # 共用資料模型與內容資料
-├── sharedUI/      # Compose Multiplatform 共用 UI
-├── androidApp/    # Android 入口
-├── iosApp/        # iOS 入口骨架
+├── androidApp/    # Kotlin + Jetpack Compose Android App
+├── iosApp/        # Swift + SwiftUI iOS App
+├── shared/        # 舊 KMP 模組，暫保留，未加入主建置
+├── sharedUI/      # 舊 Compose Multiplatform 模組，暫保留，未加入主建置
 ├── gradle/        # Gradle version catalog
 ├── CONTENT_MAP.md
 ├── PRODUCT_SPEC.md
@@ -52,6 +53,7 @@ gradle :androidApp:assembleDebug
 
 請參考 `CODEX_SYNC_GUIDE.md`。這份文件說明如何用 GitHub、`AGENTS.md`、ChatGPT Desktop / Codex Remote 或 Handoff，在家裡桌機和外出電腦之間接力開發。
 
-## 舊 SwiftUI 原型
+## 開發狀態
 
-前一版 `Texuan` SwiftUI 原型已從工作目錄移除。需要參考時可從 Git 歷史查看；目前主線開發只走 KMP。
+目前 Android 已改為獨立 Kotlin/Compose 實作，iOS 已改為獨立 SwiftUI 實作。
+`shared/` 與 `sharedUI/` 是重構前的 KMP 程式碼，待 Android/iOS 功能確認後再清理。

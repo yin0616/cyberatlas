@@ -16,6 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CyberAtlas"
 
-include(":shared")
-include(":sharedUI")
 include(":androidApp")

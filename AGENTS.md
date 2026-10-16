@@ -2,7 +2,7 @@
 
 ## Project Identity
 
-This repository is the Chinese-first Kotlin Multiplatform project for `CyberAtlas` / `資安地圖`.
+This repository is the Chinese-first native Android and iOS project for `CyberAtlas` / `資安地圖`.
 
 The current product direction is a free cybersecurity learning app that uses a map structure:
 
@@ -14,33 +14,32 @@ This is not primarily a quiz bank, paid course app, subscription product, or bac
 
 ## Current Technical Direction
 
-- Main stack: Kotlin Multiplatform + Compose Multiplatform.
-- First app targets: Android first, iOS shell next.
+- Android: Kotlin + Jetpack Compose.
+- iOS: Swift + SwiftUI.
+- Android and iOS UI/data code are maintained independently.
 - First language: Traditional Chinese / Chinese-first content.
 - First data strategy: local sample data.
 - Avoid adding backend, login, payments, analytics, or cloud sync until explicitly requested.
 
 ## Repository Map
 
-- `shared/`: shared Kotlin models, sample content, and future repository/use-case logic.
-- `sharedUI/`: Compose Multiplatform UI shared by Android and iOS.
-- `androidApp/`: Android app entry point, manifest, and platform wiring.
-- `iosApp/`: iOS SwiftUI shell and future KMP framework integration notes.
+- `androidApp/`: native Android app, models, sample content, and Compose UI.
+- `iosApp/`: native SwiftUI app, models, sample content, and views.
+- `shared/` and `sharedUI/`: legacy KMP modules retained temporarily and excluded from the active build.
 - `CONTENT_MAP.md`: first-pass content taxonomy.
 - `PRODUCT_SPEC.md`: product positioning and MVP scope.
 - `KMP_DEVELOPMENT.md`: KMP architecture and development notes.
 
 ## Development Priorities
 
-Prefer work that strengthens the KMP product path:
+Prefer work that strengthens the native product path:
 
-1. Shared data models and sample content in `shared/`.
-2. Shared Compose UI in `sharedUI/`.
-3. Android execution path in `androidApp/`.
-4. iOS shell and KMP framework integration in `iosApp/`.
+1. Complete the Android learning flow in `androidApp/`.
+2. Mirror the product flow in native SwiftUI under `iosApp/`.
+3. Keep product/content documents consistent across both platforms.
 5. Product/content documents when the direction is still being shaped.
 
-The legacy `Texuan/` SwiftUI prototype has been removed from the working tree. Use Git history only if an old reference is explicitly needed; do not recreate it as the main implementation.
+The previous KMP implementation is retained only as a temporary reference; do not add new features to `shared/` or `sharedUI/`.
 
 ## Build And Verification
 
